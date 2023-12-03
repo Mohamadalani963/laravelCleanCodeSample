@@ -24,7 +24,8 @@ class UpdateCategoryRequest extends FormRequest
         return [
             //
             'name' => 'sometimes|string',
-            'parent_id' => 'sometimes|exists:categories,id'
+            'parent_id' => 'sometimes|exists:categories,id',
+            'file' => 'sometimes|file|mimes:jpg,svg,png'
         ];
     }
 }

@@ -12,7 +12,10 @@ class ProductImageRepo extends CrudRepository
     {
         return parent::__construct(ProductImage::class);
     }
-    protected $filters = [];
+    protected $filters = [
+        'id' => 'equal',
+        'product_id' => 'equal'
+    ];
     public function store($data, $attr = null)
     {
         $data['url'] = $data['file']->store('public/images');

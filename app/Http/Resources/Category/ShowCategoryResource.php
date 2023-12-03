@@ -22,7 +22,8 @@ class ShowCategoryResource extends JsonResource
             'parent' => new CategoryResource($this->parent),
             'children' => CategoryResource::collection($this->children),
             'products' => ProductResource::collection($this->products),
-            'name' => $this->name
+            'name' => $this->name,
+            'url' => $this->url
         ];
     }
 }

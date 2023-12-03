@@ -24,7 +24,8 @@ class CreateCategoryRequest extends FormRequest
         return [
             //
             'name' => 'required|string',
-            'parent_id' => 'sometimes|exists:categories,id'
+            'parent_id' => 'sometimes|exists:categories,id',
+            'file' => 'sometimes|file|mimes:jpg,svg,png'
         ];
     }
 }

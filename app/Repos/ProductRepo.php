@@ -11,5 +11,9 @@ class ProductRepo extends CrudRepository
     {
         return parent::__construct(Product::class);
     }
-    protected $filters = [];
+    protected $filters = [
+        'id' => 'equal',
+        'name' => 'like',
+        'category_id' => 'equal'
+    ];
 }
